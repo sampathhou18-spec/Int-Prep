@@ -1,0 +1,127 @@
+pre { border-radius: 8px; font-size: 14px; line-height: 1.8; }
+ code:not(pre code) {
+    background: rgba(207, 181, 135, 0.08) ;
+    color: var(--danger-text);
+    padding: 0.3em 6px;
+    border-radius: 7px;
+    border: 1px solid rgba(228, 225, 219, 0.644);
+    font-family:ui-monospace, monospace;
+    font-size: 1em;
+}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #ffffff;
+    --surface: #f7f8fa;
+    --border: rgba(0,0,0,0.1);
+    --border-hover: rgba(0,0,0,0.25);
+    --text: #111;
+    --muted: #666;
+    --hint: #999;
+    --info-bg: #e8f1fd;
+    --info-text: #1a5cbf;
+    --info-border: #a8c4f0;
+    --success-bg: #eaf5ea;
+    --success-text: #1e7c34;
+    --success-border: #8dd49a;
+    --danger-bg: #fdecea;
+    --danger-text: #b91c1c;
+    --danger-border: #f5a5a5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1a1a1a;
+      --surface: #242424;
+      --border: rgba(255,255,255,0.1);
+      --border-hover: rgba(255,255,255,0.28);
+      --text: #f0f0f0;
+      --muted: #aaa;
+      --hint: #666;
+      --info-bg: #0d2a50;
+      --info-text: #7ab4f5;
+      --info-border: #1e4a8a;
+      --success-bg: #0d2e14;
+      --success-text: #5abf6e;
+      --success-border: #1a5c2a;
+      --danger-bg: #2e0d0d;
+      --danger-text: #f87171;
+      --danger-border: #7f1d1d;
+    }
+  }
+ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+ul li::before {
+  content: "●";
+  color: white;
+  font-size: 8px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+ul ul {
+  padding-left: 20px;
+  margin-top: 6px;
+}
+
+ul ul li::before {
+  content: "○";
+  color: white;
+  font-size: 8px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 2rem 1.25rem;
+    max-width: 780px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  h1 { font-size: 18px; font-weight: 500; margin-bottom: 4px; }
+  .subtitle { font-size: 13px; color: var(--muted); margin-bottom: 1.5rem; }
+  .top-bar { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 1.25rem; }
+  .progress { font-size: 13px; color: var(--muted); }
+  .cat-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.5rem; }
+  .cat-tab {
+    font-size: 12px; padding: 5px 13px; border-radius: 20px;
+    border: 0.5px solid var(--border); background: transparent;
+    color: var(--muted); cursor: pointer; transition: all .15s;
+  }
+  .cat-tab:hover { border-color: var(--border-hover); color: var(--text); }
+  .cat-tab.active {
+    background: var(--info-bg); color: var(--info-text);
+    border-color: var(--info-border); font-weight: 500;
+   }
+
+ .tip-box {
+    margin-top: 12px; background: var(--surface);
+    padding: 10px 14px; font-size: 12px; color: var(--muted);
+    line-height: 1.6; border-left: 2px solid var(--success-border); border-radius: 0;
+  }
+  .tip-box b { color: var(--success-text); font-weight: 500; }
+  .q-card {
+    background: var(--bg); border: 0.5px solid var(--border);
+    border-radius: 12px; padding: 1rem 1.25rem;
+    margin-bottom: 10px; cursor: pointer; transition: border-color .15s;
+  }
+  .q-card:hover { border-color: var(--border-hover); }
+  .q-card.open { border-color: var(--info-border); }
+  .q-header { display: flex; align-items: flex-start; gap: 10px; }
+  .q-num { font-size: 11px; font-weight: 500; color: var(--hint); min-width: 20px; padding-top: 2px; }
+  .q-text { font-size: 14px; font-weight: 500; color: var(--text); flex: 1; line-height: 1.5; }
+  .q-arrow { font-size: 11px; color: var(--hint); transition: transform .2s; padding-top: 3px; flex-shrink: 0; }
+  .q-card.open .q-arrow { transform: rotate(90deg); }
+  .q-body { display: none; margin-top: 14px; padding-top: 14px; border-top: 0.5px solid var(--border); }
+ .q-card.open .q-body { display: block; }
+
+  .answer { font-size: 13px; margin-bottom: 10px; color :#F5E8D8
+
+}
+
+  .node { margin-left: 15px; margin-top: 6px; }
+  .node-q { cursor: pointer; font-size: 13px; color: #FF4500   }
+  .node-a { display: none; font-size: 12px; color: #F5E8D8; margin-left: 10px; }
