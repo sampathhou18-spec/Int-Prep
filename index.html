@@ -4,23 +4,30 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Preparation</title>
-<link rel="stylesheet" href="c.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
-
+<link rel="stylesheet" href="c.css">
 </head>
 <body>
 
 <h1>Preparation</h1>
 <div class="subtitle">Sampath Palvadi — FullStack Developer</div>
 
+<nav class="topic-tabs" id="topics"></nav>
+<div class="toolbar">
+  <input id="search" type="search" placeholder="Search this subject…" autocomplete="off">
+  <button id="toggleAll" class="cat-tab" type="button">Expand / collapse all</button>
+</div>
+<div id="intro" class="md intro"></div>
 <div class="cat-tabs" id="tabs"></div>
 <div id="qlist"></div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>  <!-- ✅ add this -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script>Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/';</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
 
 <script src="content.js"></script>
+<script src="topics.js"></script>
 <script src="s.js"></script>
-<script>Prism.highlightAll();</script>  <!-- runs AFTER content is in DOM -->
 </body>
 </html>
